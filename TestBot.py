@@ -8,8 +8,6 @@ client = discord.Client()
 
 t1 = t2 = t3 = t4 = t5 = t6 = t7 = t8 = t9 = t10 = t11 = 0
 
-token = "access_token"
-
 @client.event
 async def on_ready():
     print("다음으로 로그인합니다 : ")
@@ -123,4 +121,4 @@ async def on_message(message):
             t11 = time.time()
             
 access_token = os.environ["BOT_TOKEN"]
-client.run(token)
+client.run(access_token)
