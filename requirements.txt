@@ -1,4 +1,3 @@
-discord.py==0.16.12
-asycio
-time
-random
+asyncio==3.4.3
+discord==1.0.1
+discord.py==1.3.2
