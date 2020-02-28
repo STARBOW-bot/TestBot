@@ -7,6 +7,7 @@ import os
 client = discord.Client()
 
 t1 = t2 = t3 = t4 = t5 = t6 = t7 = t8 = t9 = t10 = t11 = 0
+start = time.time()
 
 @client.event
 async def on_ready():
@@ -119,6 +120,10 @@ async def on_message(message):
             embed.add_field(name = '!선', value = '선 명령어 설명', inline=False)
             await message.channel.send(embed = embed)
             t11 = time.time()
+            
+    if message.content == "!업타임": #Test Command
+        uptime = now - start
+        await message.channel.send(str(uptime//86400) + "d" + str(uptime//3600) + "h" + str(uptime//60) + "min" + str(uptime//1) + "sec")
             
 access_token = os.environ["BOT_TOKEN"]
 client.run(access_token)
