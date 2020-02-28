@@ -2,12 +2,13 @@ import asyncio
 import discord
 import time
 from random import *
+import os
 
 client = discord.Client()
 
 t1 = t2 = t3 = t4 = t5 = t6 = t7 = t8 = t9 = t10 = t11 = 0
 
-token = "NjgyMDMzMjcwNDAxMTM4ODAz.XlZqwQ.vIgTAW0U1pXF12tC1CZSGDb5NpE"
+token = "access_token"
 
 @client.event
 async def on_ready():
@@ -120,5 +121,6 @@ async def on_message(message):
             embed.add_field(name = '!선', value = '선 명령어 설명', inline=False)
             await message.channel.send(embed = embed)
             t11 = time.time()
-
+            
+access_token = os.environ["BOT_TOKEN"]
 client.run(token)
