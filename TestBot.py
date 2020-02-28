@@ -123,7 +123,7 @@ async def on_message(message):
             
     if message.content == "!업타임": #Test Command
         uptime = now - start
-        await message.channel.send(str(uptime//86400) + "d " + str((uptime%86400)//3600) + "h " + str((uptime%3600)//60) + "min " + str(uptime%%60) + "sec")
+        await message.channel.send(str(uptime//86400) + "d " + str((uptime%86400)//3600) + "h " + str((uptime%3600)//60) + "min " + str(uptime%60) + "sec")
             
 access_token = os.environ["BOT_TOKEN"]
 client.run(access_token)
