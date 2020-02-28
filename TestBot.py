@@ -121,7 +121,7 @@ async def on_message(message):
             await message.channel.send(embed = embed)
             t11 = time.time()
             
-    if message.content == "!업타임": #Test Comman
+    if message.content == "!업타임": #Test Command
         uptime = now - start
         await message.channel.send(str(uptime//86400) + "d " + str((uptime%86400)//3600) + "h " + str((uptime%3600)//60) + "min " + str(uptime%%60) + "sec")
             
